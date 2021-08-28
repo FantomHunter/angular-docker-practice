@@ -1,0 +1,11 @@
+<h1>Home Page</h1>
+
+<label for="users-dropbox"></label>
+<select #userBox name="users-dropbox" id="users-dropbox" (change)="onUserBoxChanged(userBox.value)">
+  <option *ngFor="let user of userList" value="{{user}}">{{user}}</option>
+</select>
+<br><br>
+<div>Selected user: {{selectedUser}}</div>
+<button (click)="loadData()">Load data</button>
+
+<h3>Message from backend: {{backendMessage$|async}}</h3>
