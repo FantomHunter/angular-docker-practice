@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  backendUrl: 'http://localhost:8082/'
+  backendUrl: window['env']['apiUrl'] || 'default',
+  debug: window['env']['debug'] || false
 };
 
 /*

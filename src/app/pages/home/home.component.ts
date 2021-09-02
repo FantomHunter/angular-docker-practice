@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
   loadData() {
     this.backendMessage$ = this.httpClient
       .get<GreetingResponse>(
-        environment.backendUrl + 'greeting-from-db?id=' + this.selectedUser
+        environment.backendUrl + '/greeting-from-db?id=' + this.selectedUser
       )
       .pipe(
         map((res: GreetingResponse) => {
